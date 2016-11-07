@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta name="viewport" content="width=device-width"/>
+		
+		
+		<!-- Add to homescreen for Safari on Ios -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="music">
+		<link rel="apple-touch-icon" href="logo.png">
+		
+		
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="music">
+		<meta name="theme-color" content="#2F3BA2">
+		<link rel="icon" sizes="192x192" href="logo.png">
+		
+		
+		<title></title>
+		
+		<script src="js/jquery.js"></script>
+		
+		<script src="js/music.js"></script>
+		<link rel="stylesheet" href="css/music.css" />
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_b6u9yar32m3ac3di.css" />
+	</head>
+	<body>
+		<audio id="audio" src="Jason Chen - 想太多.mp3"></audio>
+		
+		
+		<div id="zhao"></div>
+		
+		<!--头部-->
+		
+		
+		<div id="header">
+			<div class="return">
+				<a href="javascript:;">&#xe631;</a>
+			</div>
+			<div class="message">
+				<div class="show">
+					<span class="name">Unbelievable</span>
+					<span class="author">Owl City</span>
+				</div>
+			</div>
+			<div class="share">
+				<a href="javascript:;">&#xe62f;</a>
+			</div>
+			
+			
+		</div>
+		
+		<!--歌词-->
+		
+		<div id="lyric">
+			<div class="lyric-box">
+				<div class="lyric">
+					<!--<p>123123123123</p>
+					<p>123123123123</p>
+					<p>123123123123</p>
+					<p>123123123123</p>
+					<p>123123123123</p>
+					<p>123123123123</p>-->
+				</div>
+			</div>
+			
+
+		</div>
+
+        <!--音量-->
+			
+		<div id="volume">
+			<div class="left">
+				<a href="javascript:;">&#xe633;</a>
+			</div>
+			<div class="right">
+				<div class="volume">
+					<div class="this"></div>
+					<a href="javascript:;"></a>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!--底部-->
+		
+		<div id="floor">
+			<div id="menu">
+				<div class="center">
+					<div class="like">
+						<a href="javascript:;">&#xe629;</a>
+					</div>
+					<div class="download">
+						<a href="javascript:;">&#xe624;</a>
+					</div>
+					<div class="comment">
+						<a href="javascript:;">&#xe62c;</a>
+					</div>
+					<div class="more">
+						<a href="javascript:;">&#xe766;</a>
+					</div>
+				</div>
+			</div>
+			
+			<!--音乐进度条-->
+			
+			
+			<div id="progress">
+				<div class="begin">
+					<span>00:00</span>
+				</div>
+				<div class="pro">
+					<div class="progress">
+						<div class="red"></div>
+						<a href="javascript:;" id="cir"></a>
+					</div>
+				</div>
+				<div class="over">
+					<span>03:52</span>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			<!--底部控制键-->
+			
+			
+			<div id="key">
+				<div class="circulation">
+					<a class="all active" href="javascript:;">&#xe630;</a>
+					<a class="suiji" href="javascript:;">&#xe628;</a>
+					<a class="one" href="javascript:;">&#xe625;</a>
+				</div>
+				<div class="left">
+					<a href="javascript:;">&#xe6e4;</a>
+				</div>
+				<div class="start">
+					<a href="javascript:;">&#xe623;</a>
+				</div>
+				<div class="right">
+					<a href="javascript:;">&#xe6e9;</a>
+				</div>
+				<div class="list">
+					<a href="javascript:;">&#xe627;</a>
+				</div>	
+			</div>
+		</div>	
+		
+		
+		<!--列表-->
+		
+		<div id="list">
+			<div class="uls-header">
+				<span class="collect">
+					<a href="javascript:;">收藏全部</a>
+				</span>
+				<span class="list">
+					<a href="javascript:;">播放列表</a>
+				</span>
+				<span class="clear">
+					<a href="javascript:;">清空</a>
+				</span>
+			</div>
+			<ul id="uls">
+			
+				<!--<li class="active">
+					<span class="names">华语群星 - 友情岁月 </span>
+					<a class="delete" href="javascript:;">&#xe62e;</a>		
+				</li>-->
+			</ul>
+			<div class="uls-floor">
+				<span class="close">关闭</span>
+			</div>
+		</div>
+		
+		<!--用户-->
+		<div id="user">
+			<div class="user-left">
+				<div class="user-top">
+					<div class="message">
+						
+					</div>
+					<div class="user-name">
+						低调唯美
+					</div>
+					<a href="javascript:;" class="registration">签到</a>
+				</div>
+				<ul class="user-bottom">
+					<li>
+						<a href="javascript:;">
+							&#xe64c;<span>我的消息</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							&#xe996;<span>积分商城</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							&#xe634;<span>会员中心</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							&#xe714;<span>在线听歌免流量</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							&#xe6e8;<span>听歌识曲</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							&#xe653;<span>主题换肤</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							&#xe635;<span>夜间模式</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							&#xe647;<span>定时停止播放</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							&#xe636;<span>音乐闹钟</span>
+						</a>
+					</li>
+				</ul>
+				<div class="set">
+					<div class="set-left">
+						<a href="javascript:;">设置</a>
+					</div>
+					<div class="set-right">
+						<a href="javascript:;">退出应用</a>
+					</div>
+				</div>
+			</div>
+			<div class="user-right"></div>
+		</div>
+		
+		
+	</body>
+</html>
