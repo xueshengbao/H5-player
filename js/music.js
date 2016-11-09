@@ -39,9 +39,9 @@ $(document).ready(function(){
 	
 	
 	
-	
+	cir.on("touchstart",false)
 	cir.on("touchstart",function(e){
-		
+		console.log(1)
 		var offsetX=e.originalEvent.changedTouches[0].clientX -cir.offset().left;
 		var ir=cir.width()/2;
 		console.log(ir)
@@ -49,14 +49,19 @@ $(document).ready(function(){
 		
 		var start= ir - offsetX;
 		console.log(start)
-		$(document).on("touchstart",function(e){
-			var left=e.clientX - progress.position().left +start;
+		console.log(progress.position().left)
+		
+		$(document).on("touchmove",function(e){
+			console.log(e.originalEvent.changedTouches[0].clientX)
+			var left=e.originalEvent.changedTouches[0].clientX - progress.offset().left +start;
+			console.log(left)
 			var c= left/progress.width()*audio.duration;
 			if(c>=audio.duration || c<=0){
 				return;
 			}
-			audio.currentTime =c;	
 			console.log(c)
+			audio.currentTime =c;	
+			
 		})
 		return false;
 	})
@@ -64,12 +69,15 @@ $(document).ready(function(){
 		$(document).off("touchmove")
 	});
 	
-	
+	progress.on("touchend",false)
 	progress.on("touchend",function(e){
 		var ir=cir.width()/2;
-		var offsetX=e.originalEvent.changedTouches[0].clientX -cir.offset().left;
+		var offsetX=e.originalEvent.changedTouches[0].clientX -progress.offset().left;
 		audio.currentTime=offsetX/progress.width()*audio.duration;
 		console.log(audio.currentTime)
+		console.log(offsetX)
+		console.log(progress.width())
+		console.log(audio.duration)
     });
 	
 	//音乐进度
@@ -383,8 +391,8 @@ $(document).ready(function(){
 	
 	
 	
-	
-	vI.on('touchend',function (e){
+	vI.on('touchstart',false)
+	vI.on('touchstart',function (e){
 		var offsetX  = e.originalEvent.changedTouches[0].clientX - vI.offset().left;
 		var r = vI.width() / 2;
 		var start = r - offsetX;
